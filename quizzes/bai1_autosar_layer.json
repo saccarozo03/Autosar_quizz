@@ -1,0 +1,53 @@
+[
+    {
+      "question": "Lớp nào trong kiến trúc AUTOSAR giúp tách biệt phần mềm ứng dụng khỏi phần cứng?",
+      "choices": ["MCAL", "BSW", "RTE", "CDD"],
+      "answer": "RTE"
+    },
+    {
+      "question": "Trong kiến trúc AUTOSAR, ASW là viết tắt của?",
+      "choices": ["Abstract Service Wrapper", "Application Software", "Advanced Service Wrapper", "Application System Wrapper"],
+      "answer": "Application Software"
+    },
+    {
+      "question": "Thành phần nào trong kiến trúc AUTOSAR là phụ thuộc phần cứng?",
+      "choices": ["Application Software", "RTE", "Basic Software (BSW)", "None of the above"],
+      "answer": "Basic Software (BSW)"
+    },
+    {
+      "question": "Lớp nào là lớp thấp nhất trong Basic Software (BSW)?",
+      "choices": ["ECU Abstraction Layer", "Microcontroller Abstraction Layer (MCAL)", "Communication Services", "Service Layer"],
+      "answer": "Microcontroller Abstraction Layer (MCAL)"
+    },
+    {
+      "question": "Tác dụng chính của ECU Abstraction Layer là gì?",
+      "choices": ["Quản lý hệ điều hành", "Ẩn đi các chi tiết phần cứng của ECU", "Cung cấp giao diện CAN", "Truy cập trực tiếp vào vi điều khiển"],
+      "answer": "Ẩn đi các chi tiết phần cứng của ECU"
+    },
+    {
+      "question": "Complex Device Driver được sử dụng trong trường hợp nào?",
+      "choices": ["Khi cần kiểm tra tốc độ mạng", "Khi phần mềm cần thời gian phản hồi rất nhanh", "Khi cần lưu dữ liệu vào EEPROM", "Khi muốn viết ứng dụng giao diện"],
+      "answer": "Khi phần mềm cần thời gian phản hồi rất nhanh"
+    },
+    {
+      "question": "Giao tiếp giữa Application Software và Basic Software luôn thông qua thành phần nào?",
+      "choices": ["Service Layer", "Communication Drivers", "RTE", "OS"],
+      "answer": "RTE"
+    },
+    {
+      "question": "Lớp nào trong BSW chịu trách nhiệm giao tiếp với các hệ thống truyền thông như CAN, LIN, FlexRay?",
+      "choices": ["Communication Drivers", "Communication Hardware Abstraction", "Communication Services", "ECU Abstraction Layer"],
+      "answer": "Communication Services"
+    },
+    {
+      "question": "Tác dụng chính của Memory Services là gì?",
+      "choices": ["Quản lý giao thức truyền thông", "Trừu tượng hóa phần cứng bộ nhớ", "Giao tiếp trực tiếp với EEPROM", "Quản lý dữ liệu không mất (non-volatile) cho ứng dụng"],
+      "answer": "Quản lý dữ liệu không mất (non-volatile) cho ứng dụng"
+    },
+    {
+      "question": "Lớp nào bao gồm hệ điều hành, quản lý lỗi, CRC, Interpolation…?",
+      "choices": ["Communication Services", "System Services", "ECU Abstraction", "Application Layer"],
+      "answer": "System Services"
+    }
+  ]
+  

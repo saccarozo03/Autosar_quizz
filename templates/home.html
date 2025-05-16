@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AUTOSAR Quiz</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(120deg, #e0eafc, #cfdef3 100%);
+            min-height: 100vh;
+        }
+        h1 {
+            color: #1976D2;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+        .quiz-list {
+            list-style: none;
+            padding: 0;
+        }
+        .quiz-item {
+            background: #fff;
+            margin: 16px 0;
+            padding: 20px 24px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(33,150,243,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: box-shadow 0.2s;
+        }
+        .quiz-item:hover {
+            box-shadow: 0 8px 24px rgba(33,150,243,0.18);
+            background: #f0f7ff;
+        }
+        .quiz-item a {
+            color: #1976D2;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            transition: color 0.2s;
+        }
+        .quiz-item a:hover {
+            color: #0d47a1;
+        }
+        .quiz-status {
+            font-size: 16px;
+            margin-left: 20px;
+        }
+        .quiz-status.done {
+            color: #43a047;
+            font-weight: bold;
+        }
+        .quiz-status.notyet {
+            color: #888;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AUTOSAR Quiz</h1>
+    <ul class="quiz-list">
+        {% for quiz in quizzes %}
+        <li class="quiz-item">
+            <a href="{{ url_for('quiz', quiz_id=quiz) }}">{{ quiz.replace('_', ' ').title() }}</a>
+            {% if user_scores[quiz] is defined %}
+                <span class="quiz-status done">
+                    ✔ Đã làm: {{ user_scores[quiz] }}/{{ quiz_lengths[quiz] }}
+                </span>
+            {% else %}
+                <span class="quiz-status notyet">Chưa làm</span>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+<footer>
+    <p>Made by Nguyễn Tiến Đức</p>
+</footer>
+</html>

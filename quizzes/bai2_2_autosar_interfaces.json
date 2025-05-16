@@ -1,0 +1,103 @@
+[
+    {
+      "question": "Câu 1: Giao diện nào được sinh ra bởi RTE dựa trên cấu hình SWC?",
+      "choices": [
+        "Standardized AUTOSAR Interface",
+        "Standardized Interface",
+        "AUTOSAR Interface",
+        "ECU Abstraction Interface"
+      ],
+      "answer": "AUTOSAR Interface"
+    },
+    {
+      "question": "Câu 2: Hàm Dem_ReportErrorStatus() là ví dụ điển hình của loại interface nào?",
+      "choices": [
+        "AUTOSAR Interface",
+        "Service-Oriented Interface",
+        "Standardized AUTOSAR Interface",
+        "Standardized Interface"
+      ],
+      "answer": "Standardized AUTOSAR Interface"
+    },
+    {
+      "question": "Câu 3: Giao diện nào cho phép một Software Component giao tiếp trực tiếp với một Service như Diagnostic Manager?",
+      "choices": [
+        "AUTOSAR Interface",
+        "Standardized AUTOSAR Interface",
+        "Standardized Interface",
+        "MCAL Interface"
+      ],
+      "answer": "Standardized AUTOSAR Interface"
+    },
+    {
+      "question": "Câu 4: Hàm Dio_ReadChannel() thuộc loại interface nào sau đây?",
+      "choices": [
+        "AUTOSAR Interface",
+        "Standardized AUTOSAR Interface",
+        "Standardized Interface",
+        "MCAL Specific Interface"
+      ],
+      "answer": "Standardized Interface"
+    },
+    {
+      "question": "Câu 5: AUTOSAR Interface thường được sử dụng trong giao tiếp giữa:",
+      "choices": [
+        "Các Service Layer",
+        "Các MCAL Module",
+        "Các SWC với nhau qua RTE",
+        "Application và OS"
+      ],
+      "answer": "Các SWC với nhau qua RTE"
+    },
+    {
+      "question": "Câu 6: Interface nào được định nghĩa bởi AUTOSAR chuẩn và có thể dùng giữa BSW modules?",
+      "choices": [
+        "AUTOSAR Interface",
+        "Service Interface",
+        "Standardized Interface",
+        "ECU Abstraction"
+      ],
+      "answer": "Standardized Interface"
+    },
+    {
+      "question": "Câu 7: Điểm khác biệt lớn nhất giữa Standardized AUTOSAR Interface và AUTOSAR Interface là gì?",
+      "choices": [
+        "Một cái chạy nhanh hơn cái kia",
+        "Một cái dành cho hardware, cái kia dành cho software",
+        "Một được cấu hình tự do, một được định nghĩa sẵn trong chuẩn",
+        "Không có khác biệt"
+      ],
+      "answer": "Một được cấu hình tự do, một được định nghĩa sẵn trong chuẩn"
+    },
+    {
+      "question": "Câu 8: Interface nào không cần lập trình thủ công mà được sinh tự động từ cấu hình ARXML?",
+      "choices": [
+        "Standardized Interface",
+        "AUTOSAR Interface",
+        "Driver Interface",
+        "OS Interface"
+      ],
+      "answer": "AUTOSAR Interface"
+    },
+    {
+      "question": "Câu 9: Khi SWC muốn ghi dữ liệu lên RTE, nó sẽ dùng hàm nào?",
+      "choices": [
+        "Dio_ReadChannel()",
+        "Dem_ReportErrorStatus()",
+        "Rte_Write_X()",
+        "CanIf_Transmit()"
+      ],
+      "answer": "Rte_Write_X()"
+    },
+    {
+      "question": "Câu 10: Giao diện được định nghĩa sẵn bằng ngôn ngữ C bởi chuẩn AUTOSAR, dùng để giao tiếp giữa các module BSW là:",
+      "choices": [
+        "AUTOSAR Interface",
+        "Standardized AUTOSAR Interface",
+        "Standardized Interface",
+        "Application Interface"
+      ],
+      "answer": "Standardized Interface"
+    }
+  ]
+  

@@ -1,0 +1,48 @@
+[
+    {
+      "question": "Giao diện nào được tạo ra bởi RTE từ cấu hình?",
+      "choices": ["Standardized Interface", "Standardized AUTOSAR Interface", "AUTOSAR Interface", "MCAL Interface"],
+      "answer": "AUTOSAR Interface"
+    },
+    {
+      "question": "Standardized AUTOSAR Interface dùng để làm gì?",
+      "choices": [
+        "Kết nối giữa các BSW module với nhau",
+        "Cho phép ứng dụng truy cập dịch vụ của BSW như ECU State Manager",
+        "Giao tiếp giữa Application và Hardware",
+        "Truy cập trực tiếp vào thanh ghi vi điều khiển"
+      ],
+      "answer": "Cho phép ứng dụng truy cập dịch vụ của BSW như ECU State Manager"
+    },
+    {
+      "question": "Standardized Interface là gì?",
+      "choices": [
+        "API được tạo bởi người dùng",
+        "Giao diện do AUTOSAR định nghĩa sẵn dưới dạng C API",
+        "Chỉ có ở lớp ứng dụng",
+        "Một dạng giao tiếp độc quyền của OEM"
+      ],
+      "answer": "Giao diện do AUTOSAR định nghĩa sẵn dưới dạng C API"
+    },
+    {
+      "question": "Ví dụ nào sau đây là một Standardized Interface?",
+      "choices": [
+        "RTE_Read()",
+        "DIO_ReadChannel()",
+        "Application_Init()",
+        "BSW_ServiceCall()"
+      ],
+      "answer": "DIO_ReadChannel()"
+    },
+    {
+      "question": "Giao diện AUTOSAR (AUTOSAR Interface) thường dùng ở đâu?",
+      "choices": [
+        "Giữa các BSW module",
+        "Giữa Application và RTE",
+        "Giữa OS và Application",
+        "Giữa MCAL và RTE"
+      ],
+      "answer": "Giữa Application và RTE"
+    }
+  ]
+  

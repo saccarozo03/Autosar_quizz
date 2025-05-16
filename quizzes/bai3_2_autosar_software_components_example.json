@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Trong bài toán, cảm biến tốc độ xe được kết nối với loại chân nào của vi điều khiển?",
+    "choices": ["Analog pin", "CAN interface", "Digital IO pin", "PWM pin"],
+    "answer": "Digital IO pin"
+  },
+  {
+    "question": "Thành phần phần mềm nào chịu trách nhiệm đọc tín hiệu từ chân IO của cảm biến tốc độ?",
+    "choices": ["Sensor Actuator SWC", "Application SWC", "ECU Abstraction SWC", "Service SWC"],
+    "answer": "ECU Abstraction SWC"
+  },
+  {
+    "question": "Thành phần phần mềm nào thực hiện tính toán tốc độ từ tín hiệu xung cảm biến?",
+    "choices": ["Sensor Actuator SWC", "ECU Abstraction SWC", "CDD", "Parameter SWC"],
+    "answer": "Sensor Actuator SWC"
+  },
+  {
+    "question": "Thành phần phần mềm nào chứa thuật toán xử lý logic cắt xăng khi vượt tốc độ?",
+    "choices": ["Service SWC", "Sensor Actuator SWC", "Application SWC", "CDD"],
+    "answer": "Application SWC"
+  },
+  {
+    "question": "Thành phần nào cung cấp giá trị tốc độ giới hạn có thể hiệu chỉnh trong sản xuất?",
+    "choices": ["NVBlock SWC", "Application SWC", "Parameter SWC", "Sensor Actuator SWC"],
+    "answer": "Parameter SWC"
+  },
+  {
+    "question": "Tại sao cần sử dụng Complex Device Driver (CDD) trong bài toán này?",
+    "choices": [
+      "Vì nó dễ cấu hình",
+      "Để truyền dữ liệu qua Bluetooth",
+      "Để cắt kim phun nhanh và giảm độ trễ",
+      "Để lưu dữ liệu vào EEPROM"
+    ],
+    "answer": "Để cắt kim phun nhanh và giảm độ trễ"
+  },
+  {
+    "question": "Thành phần nào chịu trách nhiệm thực hiện hành động vật lý ngắt kim phun?",
+    "choices": ["Service SWC", "CDD", "Sensor Actuator SWC", "Application SWC"],
+    "answer": "CDD"
+  },
+  {
+    "question": "Thành phần nào được dùng để ghi lỗi vào hệ thống chẩn đoán?",
+    "choices": ["NVBlock SWC", "Service SWC", "Parameter SWC", "CDD"],
+    "answer": "Service SWC"
+  },
+  {
+    "question": "Thành phần phần mềm nào lưu giá trị tốc độ tối đa vào bộ nhớ không mất điện?",
+    "choices": ["Application SWC", "NVBlock SWC", "Sensor Actuator SWC", "Parameter SWC"],
+    "answer": "NVBlock SWC"
+  },
+  {
+    "question": "Thành phần nào khôi phục dữ liệu tốc độ tối đa sau khi ECU khởi động lại?",
+    "choices": ["ECU Abstraction", "Service SWC", "Application SWC", "NVBlock SWC"],
+    "answer": "NVBlock SWC"
+  },
+  {
+    "question": "Giá trị tốc độ tối đa được tính toán bởi thành phần nào?",
+    "choices": ["Sensor Actuator SWC", "Parameter SWC", "Application SWC", "Service SWC"],
+    "answer": "Application SWC"
+  },
+  {
+    "question": "Dữ liệu được lưu và phục hồi bởi thành phần nào thuộc lớp BSW?",
+    "choices": ["NVM Manager", "RTE", "Diagnostic Event Manager", "OS"],
+    "answer": "NVM Manager"
+  },
+  {
+    "question": "Thành phần nào KHÔNG chứa file mã C và chỉ chứa thông số cấu hình?",
+    "choices": ["Application SWC", "NVBlock SWC", "Parameter SWC", "Sensor Actuator SWC"],
+    "answer": "Parameter SWC"
+  },
+  {
+    "question": "Service SWC trong bài toán trên được dùng để làm gì?",
+    "choices": ["Truyền dữ liệu CAN", "Ghi nhận lỗi hệ thống", "Tính tốc độ", "Cắt kim phun"],
+    "answer": "Ghi nhận lỗi hệ thống"
+  },
+  {
+    "question": "Ứng dụng chính của CDD là gì?",
+    "choices": [
+      "Cải thiện tính toán tốc độ",
+      "Giảm độ trễ khi điều khiển trực tiếp phần cứng",
+      "Lưu dữ liệu NVM",
+      "Cung cấp tham số hiệu chỉnh"
+    ],
+    "answer": "Giảm độ trễ khi điều khiển trực tiếp phần cứng"
+  },
+  {
+    "question": "Tín hiệu lỗi từ Application SWC được gửi tới thành phần nào?",
+    "choices": ["Sensor Actuator SWC", "Service SWC", "ECU Abstraction SWC", "CDD"],
+    "answer": "Service SWC"
+  },
+  {
+    "question": "Thành phần nào chịu trách nhiệm cung cấp tín hiệu đầu vào cho Sensor Actuator SWC?",
+    "choices": ["ECU Abstraction SWC", "CDD", "Application SWC", "Service SWC"],
+    "answer": "ECU Abstraction SWC"
+  },
+  {
+    "question": "RTE (Runtime Environment) đóng vai trò gì trong hệ thống AUTOSAR?",
+    "choices": [
+      "Truy cập bộ nhớ",
+      "Quản lý thời gian thực",
+      "Kết nối giữa các SWC và phần mềm nền",
+      "Cung cấp chức năng chẩn đoán"
+    ],
+    "answer": "Kết nối giữa các SWC và phần mềm nền"
+  },
+  {
+    "question": "Giá trị tốc độ giới hạn trong bài toán có thể được điều chỉnh khi nào?",
+    "choices": ["Trong quá trình chạy xe", "Sau khi nạp chương trình", "Trong quá trình sản xuất", "Chỉ khi thay đổi cảm biến"],
+    "answer": "Trong quá trình sản xuất"
+  },
+  {
+    "question": "Mục tiêu chính của bài toán AUTOSAR là gì?",
+    "choices": [
+      "Tăng hiệu suất động cơ",
+      "Bảo vệ hệ thống bằng cách giới hạn tốc độ và xử lý lỗi",
+      "Cải thiện hiển thị thông tin",
+      "Giảm tiêu thụ điện"
+    ],
+    "answer": "Bảo vệ hệ thống bằng cách giới hạn tốc độ và xử lý lỗi"
+  }
+]

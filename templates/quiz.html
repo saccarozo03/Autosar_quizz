@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz - {{ quiz_id }}</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: linear-gradient(120deg, #e0eafc, #cfdef3 100%);
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    h1 {
+      color: #1976D2;
+      text-align: center;
+      margin-bottom: 24px;
+      letter-spacing: 2px;
+    }
+    .score-box {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(33,150,243,0.08);
+      padding: 18px 24px;
+      margin-bottom: 24px;
+      text-align: center;
+      font-size: 22px;
+      color: #43a047;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .back-btn {
+      background: #1976D2;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 22px;
+      font-size: 16px;
+      margin: 10px 0 20px 0;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .back-btn:hover {
+      background: #0d47a1;
+    }
+    form {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(33,150,243,0.08);
+      padding: 24px 28px;
+      margin-bottom: 30px;
+    }
+    .question-block {
+      margin-bottom: 28px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e3e3e3;
+    }
+    .question-block:last-child {
+      border-bottom: none;
+    }
+    .question-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #1976D2;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      padding-left: 8px;
+    }
+    input[type="radio"] {
+      margin-right: 8px;
+      accent-color: #1976D2;
+    }
+    .correct {
+      color: #43a047;
+      font-weight: bold;
+    }
+    .wrong {
+      color: #e53935;
+      font-weight: bold;
+    }
+    .explanation {
+      font-style: italic;
+      color: #555;
+      margin-top: 5px;
+      margin-left: 10px;
+      font-size: 15px;
+    }
+    .submit-btn {
+      background: #43a047;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 28px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 18px;
+      transition: background 0.2s;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .submit-btn:hover {
+      background: #2e7031;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quiz: {{ quiz_id.replace('_', ' ').title() }}</h1>
+
+  {% if show_results %}
+    <div class="score-box">
+      Điểm của bạn: {{ score }}/{{ questions|length }}
+    </div>
+    <br>
+    <a href="{{ url_for('home') }}">
+      <button type="button" class="back-btn">Quay về trang chủ</button>
+    </a>
+  {% endif %}
+
+  <form method="POST">
+    {% for q in questions %}
+      {% set q_idx = loop.index0 %}
+      <div class="question-block">
+        <div class="question-title">Câu {{ loop.index }}: {{ q.question }}</div>
+        {% for choice in q.choices %}
+          {% set user_choice = user_answers[q_idx] if show_results else None %}
+          <label>
+            <input type="radio" name="q{{ q_idx }}" value="{{ choice }}" 
+              {% if show_results and choice == user_choice %} checked {% endif %}
+              {% if not show_results %} required {% endif %}
+              {% if show_results %} disabled {% endif %}>
+            <span
+              {% if show_results %}
+                {% if choice == q.answer %}
+                  class="correct"
+                {% elif choice == user_choice %}
+                  class="wrong"
+                {% endif %}
+              {% endif %}
+            >
+              {{ choice }}
+              {% if show_results %}
+                {% if choice == q.answer %}
+                  ✔️
+                {% elif choice == user_choice %}
+                  ❌
+                {% endif %}
+              {% endif %}
+            </span>
+          </label>
+        {% endfor %}
+        {% if show_results and q.explanation %}
+          <div class="explanation">🛈 {{ q.explanation }}</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+
+    {% if not show_results %}
+      <input type="submit" value="Nộp bài" class="submit-btn">
+    {% endif %}
+  </form>
+</body>
+</html>

@@ -1,0 +1,222 @@
+[
+    {
+        "question": "Thành phần phần mềm nào được sử dụng phổ biến nhất trong ứng dụng AUTOSAR?",
+        "choices": [
+            "Service Component",
+            "Application Software Component",
+            "Parameter Software Component",
+            "Composition Software Component"
+        ],
+        "answer": "Application Software Component",
+        "explanation": "Test explaination"
+    },
+    {
+        "question": "Thành phần nào dùng để lưu dữ liệu vào bộ nhớ không thay đổi (NVM)?",
+        "choices": [
+            "Service Proxy Component",
+            "ECU Abstraction Component",
+            "NV Block Software Component",
+            "Sensor Actuator Component"
+        ],
+        "answer": "NV Block Software Component",
+        "explanation": ""
+    },
+    {
+        "question": "Thành phần nào cho phép truy cập phần cứng nhanh hơn trong các ứng dụng thời gian thực?",
+        "choices": [
+            "Parameter Software Component",
+            "Complex Device Driver (CDD)",
+            "Service Component",
+            "Application Software Component"
+        ],
+        "answer": "Complex Device Driver (CDD)",
+        "explanation": ""
+    },
+    {
+        "question": "Dữ liệu trong bộ nhớ NVM có đặc điểm gì?",
+        "choices": [
+            "Mất sau khi tắt nguồn",
+            "Lưu trữ tạm thời",
+            "Giữ lại sau khi tắt nguồn",
+            "Chỉ dùng cho cảm biến"
+        ],
+        "answer": "Giữ lại sau khi tắt nguồn",
+        "explanation": ""
+    },
+    {
+        "question": "Thành phần nào dùng để cung cấp dịch vụ từ phần mềm cơ bản (BSW) đến lớp ứng dụng?",
+        "choices": [
+            "Service Component",
+            "CDD",
+            "Sensor Actuator Component",
+            "Application Software Component"
+        ],
+        "answer": "Service Component",
+        "explanation": ""
+    },
+    {
+        "question": "Service Proxy Component được dùng khi nào?",
+        "choices": [
+            "Truy cập cảm biến",
+            "Truy cập dịch vụ từ ECU khác",
+            "Lưu dữ liệu tạm thời",
+            "Hiệu chỉnh thông số"
+        ],
+        "answer": "Truy cập dịch vụ từ ECU khác",
+        "explanation": ""
+    },
+    {
+        "question": "ECU Abstraction Component giúp ứng dụng giao tiếp với phần nào?",
+        "choices": [
+            "Phần mềm ứng dụng khác",
+            "Vi điều khiển",
+            "MCAL và ngoại vi phần cứng",
+            "BSW Manager"
+        ],
+        "answer": "MCAL và ngoại vi phần cứng",
+        "explanation": ""
+    },
+    {
+        "question": "Thành phần nào đảm nhiệm việc chuyển đổi dữ liệu cảm biến và điều khiển thiết bị chấp hành?",
+        "choices": [
+            "Application Component",
+            "Parameter Component",
+            "Sensor Actuator Component",
+            "Service Component"
+        ],
+        "answer": "Sensor Actuator Component",
+        "explanation": ""
+    },
+    {
+        "question": "Parameter Software Component KHÔNG thể có gì sau đây?",
+        "choices": [
+            "Receiver Port",
+            "Provider Port",
+            "Cấu hình",
+            "Thông số hiệu chỉnh"
+        ],
+        "answer": "Receiver Port",
+        "explanation": ""
+    },
+    {
+        "question": "Thành phần nào KHÔNG có file C đi kèm?",
+        "choices": [
+            "Application Component",
+            "Parameter Software Component",
+            "Sensor Actuator Component",
+            "Complex Device Driver"
+        ],
+        "answer": "Parameter Software Component",
+        "explanation": ""
+    },
+    {
+        "question": "Composition Software Component được dùng để làm gì?",
+        "choices": [
+            "Xử lý dữ liệu cảm biến",
+            "Lưu dữ liệu vào NVM",
+            "Gom nhóm các component",
+            "Cung cấp dịch vụ"
+        ],
+        "answer": "Gom nhóm các component",
+        "explanation": ""
+    },
+    {
+        "question": "CDD luôn phải truyền dữ liệu qua thành phần nào?",
+        "choices": [
+            "MCAL",
+            "Service Proxy",
+            "RTE",
+            "NVM Manager"
+        ],
+        "answer": "RTE",
+        "explanation": ""
+    },
+    {
+        "question": "Dữ liệu số km đã đi của xe nên được lưu bằng thành phần nào?",
+        "choices": [
+            "Composition Component",
+            "Sensor Actuator Component",
+            "NV Block Software Component",
+            "Service Component"
+        ],
+        "answer": "NV Block Software Component",
+        "explanation": ""
+    },
+    {
+        "question": "Cổng nào được phép có trong Parameter Software Component?",
+        "choices": [
+            "Receiver Port",
+            "Provider Port",
+            "Both",
+            "None"
+        ],
+        "answer": "Provider Port",
+        "explanation": ""
+    },
+    {
+        "question": "Khi một ứng dụng cần kích hoạt túi khí tức thì, nên dùng thành phần nào?",
+        "choices": [
+            "Service Proxy Component",
+            "Parameter Software Component",
+            "Complex Device Driver",
+            "Sensor Actuator Component"
+        ],
+        "answer": "Complex Device Driver",
+        "explanation": ""
+    },
+    {
+        "question": "Thành phần nào không mang chức năng xử lý mà chỉ để cấu hình kết nối?",
+        "choices": [
+            "Application Component",
+            "Composition Software Component",
+            "NV Block Software Component",
+            "CDD"
+        ],
+        "answer": "Composition Software Component",
+        "explanation": ""
+    },
+    {
+        "question": "Calibration có thể được tinh chỉnh trong giai đoạn nào?",
+        "choices": [
+            "Phát triển phần mềm",
+            "Sản xuất xe",
+            "Cài đặt BSW",
+            "Tạo CDD"
+        ],
+        "answer": "Sản xuất xe",
+        "explanation": ""
+    },
+    {
+        "question": "Service Component thường liên kết với điều gì?",
+        "choices": [
+            "Một ứng dụng bất kỳ",
+            "ECU cụ thể",
+            "Nhiều ECU",
+            "Cảm biến"
+        ],
+        "answer": "ECU cụ thể",
+        "explanation": ""
+    },
+    {
+        "question": "Thành phần nào chuyển dữ liệu thô từ cảm biến sang giá trị dùng được?",
+        "choices": [
+            "Application Component",
+            "Sensor Actuator Component",
+            "Composition Component",
+            "ECU Abstraction Component"
+        ],
+        "answer": "Sensor Actuator Component",
+        "explanation": ""
+    },
+    {
+        "question": "Trong AUTOSAR, thành phần nào có thể chứa các Composition khác?",
+        "choices": [
+            "Application Software Component",
+            "Parameter Software Component",
+            "Composition Software Component",
+            "Sensor Actuator Component"
+        ],
+        "answer": "Composition Software Component",
+        "explanation": ""
+    }
+]
