@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Quiz - {{ quiz_id }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -12,12 +13,15 @@
       padding: 20px;
       min-height: 100vh;
     }
+
     h1 {
       color: #1976D2;
       text-align: center;
       margin-bottom: 24px;
       letter-spacing: 2px;
+      font-size: 28px;
     }
+
     .score-box {
       background: #fff;
       border-radius: 10px;
@@ -29,7 +33,9 @@
       color: #43a047;
       font-weight: bold;
       display: inline-block;
+      width: 100%;
     }
+
     .back-btn {
       background: #1976D2;
       color: #fff;
@@ -41,9 +47,11 @@
       cursor: pointer;
       transition: background 0.2s;
     }
+
     .back-btn:hover {
       background: #0d47a1;
     }
+
     form {
       background: #fff;
       border-radius: 10px;
@@ -51,20 +59,24 @@
       padding: 24px 28px;
       margin-bottom: 30px;
     }
+
     .question-block {
       margin-bottom: 28px;
       padding-bottom: 12px;
       border-bottom: 1px solid #e3e3e3;
     }
+
     .question-block:last-child {
       border-bottom: none;
     }
+
     .question-title {
       font-size: 18px;
       font-weight: 700;
       margin-bottom: 10px;
       color: #1976D2;
     }
+
     label {
       display: block;
       margin-bottom: 8px;
@@ -72,18 +84,22 @@
       cursor: pointer;
       padding-left: 8px;
     }
+
     input[type="radio"] {
       margin-right: 8px;
       accent-color: #1976D2;
     }
+
     .correct {
       color: #43a047;
       font-weight: bold;
     }
+
     .wrong {
       color: #e53935;
       font-weight: bold;
     }
+
     .explanation {
       font-style: italic;
       color: #555;
@@ -91,6 +107,7 @@
       margin-left: 10px;
       font-size: 15px;
     }
+
     .submit-btn {
       background: #43a047;
       color: #fff;
@@ -101,13 +118,49 @@
       font-weight: bold;
       cursor: pointer;
       margin-top: 18px;
-      transition: background 0.2s;
       display: block;
       margin-left: auto;
       margin-right: auto;
+      transition: background 0.2s;
     }
+
     .submit-btn:hover {
       background: #2e7031;
+    }
+
+    /* === Responsive Styles for Mobile Devices === */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      .score-box {
+        font-size: 18px;
+        padding: 16px;
+      }
+
+      form {
+        padding: 16px;
+      }
+
+      .question-title {
+        font-size: 16px;
+      }
+
+      label {
+        font-size: 14px;
+      }
+
+      .submit-btn, .back-btn {
+        font-size: 15px;
+        padding: 10px 20px;
+        width: 100%;
+        box-sizing: border-box;
+      }
     }
   </style>
 </head>

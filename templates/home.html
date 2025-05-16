@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>AUTOSAR Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -12,16 +13,20 @@
             background: linear-gradient(120deg, #e0eafc, #cfdef3 100%);
             min-height: 100vh;
         }
+
         h1 {
             color: #1976D2;
             text-align: center;
             margin-bottom: 30px;
             letter-spacing: 2px;
+            font-size: 28px;
         }
+
         .quiz-list {
             list-style: none;
             padding: 0;
         }
+
         .quiz-item {
             background: #fff;
             margin: 16px 0;
@@ -29,40 +34,84 @@
             border-radius: 10px;
             box-shadow: 0 4px 16px rgba(33,150,243,0.08);
             display: flex;
+            flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            transition: box-shadow 0.2s;
+            transition: box-shadow 0.2s, background 0.2s;
+            flex-wrap: wrap;
         }
+
         .quiz-item:hover {
             box-shadow: 0 8px 24px rgba(33,150,243,0.18);
             background: #f0f7ff;
         }
+
         .quiz-item a {
             color: #1976D2;
             text-decoration: none;
             font-size: 20px;
             font-weight: 700;
             transition: color 0.2s;
+            flex-grow: 1;
         }
+
         .quiz-item a:hover {
             color: #0d47a1;
         }
+
         .quiz-status {
             font-size: 16px;
             margin-left: 20px;
+            white-space: nowrap;
         }
+
         .quiz-status.done {
             color: #43a047;
             font-weight: bold;
         }
+
         .quiz-status.notyet {
             color: #888;
         }
+
         footer {
             text-align: center;
             margin-top: 40px;
             color: #888;
             font-size: 15px;
+        }
+
+        /* Responsive styles for mobile */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+
+            .quiz-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 16px;
+            }
+
+            .quiz-item a {
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+
+            .quiz-status {
+                font-size: 14px;
+                margin-left: 0;
+            }
+
+            footer {
+                font-size: 13px;
+                margin-top: 30px;
+            }
         }
     </style>
 </head>
