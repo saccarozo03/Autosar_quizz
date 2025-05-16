@@ -125,6 +125,7 @@
   {% endif %}
 
   <form method="POST">
+    
     {% for q in questions %}
       {% set q_idx = loop.index0 %}
       <div class="question-block">
@@ -163,6 +164,9 @@
     {% endfor %}
 
     {% if not show_results %}
+      <a href="{{ url_for('home') }}">
+        <button type="button" class="back-btn">Quay lại trang chủ</button>
+      </a>
       <input type="submit" value="Nộp bài" class="submit-btn">
     {% endif %}
   </form>
