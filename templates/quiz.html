@@ -168,6 +168,10 @@
         <button type="button" class="back-btn">Quay lại trang chủ</button>
       </a>
       <input type="submit" value="Nộp bài" class="submit-btn">
+    {% else %}
+      <a href="{{ url_for('home') }}">
+        <button type="button" class="back-btn">Quay về trang chủ</button>
+      </a>
     {% endif %}
   </form>
 </body>
